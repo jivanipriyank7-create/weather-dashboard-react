@@ -1,0 +1,68 @@
+.hourly-forecast {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+.hourly-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hourly-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+.hourly-subtitle,
+.hourly-summary {
+  font-size: 11px;
+  color: var(--color-muted);
+}
+
+/* A small grid inside the card: 8 equal columns, one per hour */
+.hourly-list {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  padding: 0;
+  list-style: none;
+}
+
+.hour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.hour-time {
+  font-size: 11px;
+  color: var(--color-muted);
+}
+
+.hour-temp {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+.hour-rain {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  color: var(--color-muted);
+}
+
+.hourly-summary {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: auto;
+}

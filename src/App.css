@@ -1,0 +1,12 @@
+.page {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 34px var(--page-gutter) var(--page-gutter);
+}
+
+.forecasts {
+  display: grid;
+  grid-template-columns: 1fr 446px;
+  gap: 24px;
+  margin-top: var(--section-gap);
+}

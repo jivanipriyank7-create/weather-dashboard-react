@@ -1,0 +1,107 @@
+.daily-forecast {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+.forecast-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forecast-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+.forecast-dates,
+.forecast-summary {
+  font-size: 11px;
+  color: var(--color-muted);
+}
+
+.forecast-list {
+  padding: 0;
+  list-style: none;
+}
+
+.forecast-row {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 -8px;
+  padding: 0 8px;
+  border-radius: 10px;
+  transition: background-color var(--transition-fast);
+}
+
+/* Hover: the day under the mouse gets a light grey background */
+.forecast-row:hover {
+  background: var(--color-surface);
+
+}
+
+.forecast-day {
+  width: 43px;
+  font-size: 12px;
+  color: var(--color-ink);
+}
+
+.forecast-row:first-child .forecast-day {
+  font-weight: 600;
+}
+
+.icon-sun {
+  color: var(--color-sun);
+}
+
+.icon-cloud {
+  color: var(--color-cloud);
+}
+
+.forecast-rain {
+  width: 30px;
+  text-align: right;
+  font-size: 10px;
+  color: var(--color-muted);
+}
+
+.forecast-rain.wet {
+  color: var(--color-accent);
+}
+
+.forecast-low {
+  width: 25px;
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.forecast-bar {
+  position: relative;
+  flex: 1;
+  height: 5px;
+  background: var(--color-surface);
+  border-radius: var(--radius-pill);
+}
+
+.forecast-fill {
+  position: absolute;
+  top: 0;
+  height: 5px;
+  background: linear-gradient(to right, var(--color-accent-soft), var(--color-accent));
+  border-radius: var(--radius-pill);
+}
+
+.forecast-high {
+  width: 25px;
+  text-align: right;
+  font-size: 12px;
+  color: var(--color-ink);
+}

@@ -5,7 +5,6 @@ function Navbar() {
   
     // Memory box for the text typed in the search box (starts empty)
   const [query, setQuery] = useState('')
-    console.log('Typed so far:', query)
   return (
     <header className="navbar">
       <div className="brand">

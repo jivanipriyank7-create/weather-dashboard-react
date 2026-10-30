@@ -33,8 +33,7 @@ function App() {
           getCurrentWeather(city),
           getForecast(city),
         ])
-        console.log('Weather answer:', current)
-        console.log('Forecast answer:', forecastData)
+      
 
         setWeather(current)
         setForecast(forecastData)

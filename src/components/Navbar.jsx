@@ -1,7 +1,11 @@
 import { CloudSun, Search, LocateFixed } from 'lucide-react'
 import './Navbar.css'
-
+import { useState } from 'react'
 function Navbar() {
+  
+    // Memory box for the text typed in the search box (starts empty)
+  const [query, setQuery] = useState('')
+    console.log('Typed so far:', query)
   return (
     <header className="navbar">
       <div className="brand">
@@ -23,6 +27,8 @@ function Navbar() {
             id="city-input"
             className="search-input"
             placeholder="Search city or zip code"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
           />
           <span className="shortcut">⌘ K</span>
         </form>

@@ -5,6 +5,12 @@ function Navbar() {
   
     // Memory box for the text typed in the search box (starts empty)
   const [query, setQuery] = useState('')
+  
+  // Runs when the form is sent (Enter pressed in the search box)
+  function handleSubmit(event) {
+    event.preventDefault()                 // stop the browser from reloading the page
+    console.log('Searching for:', query)
+  }
   return (
     <header className="navbar">
       <div className="brand">
@@ -19,7 +25,7 @@ function Navbar() {
       </nav>
 
       <div className="location-controls">
-        <form className="search-form" id="search-form">
+                <form className="search-form" id="search-form" onSubmit={handleSubmit}>
           <Search size={16} />
           <input
             type="text"
